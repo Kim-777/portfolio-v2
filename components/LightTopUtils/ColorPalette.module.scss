@@ -1,0 +1,25 @@
+.palette {
+   position: absolute;
+   right: 0;
+   top: 30px;
+   display: flex;
+   justify-content: flex-end;
+   width: 100px;
+   flex-wrap: wrap;
+}
+
+.palette_item {
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  // background-color: red;
+  transition: all 200ms ease;
+  margin-left: 12px;
+  margin-top: 8px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+}

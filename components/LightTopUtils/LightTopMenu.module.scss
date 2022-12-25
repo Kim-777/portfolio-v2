@@ -1,0 +1,14 @@
+.wrapper {
+  //  background-color: yellow;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+   display: flex;
+   flex-direction: row;
+  //  justify-content: center;
+  align-items: center;
+  //  width: 500px;
+  //  grid-template-columns: repeat(3, 1fr);
+   
+   column-gap: 10px;
+}

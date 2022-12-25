@@ -1,0 +1,21 @@
+
+.main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem;
+  min-height: 100vh;
+  transition: all 200ms ease
+}
+
+.light {
+background-color: white;
+}
+
+.dark {
+  background-color: black;
+}
