@@ -8,7 +8,7 @@ import { useLanguage } from "contexts/LanguageProvider";
 
 const cx = classNames.bind(styles);
 
-const Tabs = ["/", "/skills", "/career"];
+const Tabs = ["/", "/skills", "/works"];
 
 const MainTabs = () => {
   const router = useRouter();
