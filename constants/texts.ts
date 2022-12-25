@@ -236,7 +236,7 @@ export const texts: { [country in EnabledLanguage]: TextKeywords } = {
         title: "JIGUGONG, App",
         period: "2022/01 ~ 2022/04",
         part: "Mission, Meeting Feature Develop",
-        images: ["/images/jigugong.png"],
+        images: ["/images/jigugong1.png"],
         feelings:
           "I maintained existing apps across the board and created a new feature called Meeting. Redux solved the problem of data synchronization on the screen in the stack below, and I was able to experience app optimization through FlatList and FastImage.",
         skills: "react-native, react-navigation, redux, axios",
@@ -245,7 +245,7 @@ export const texts: { [country in EnabledLanguage]: TextKeywords } = {
         title: "BANKMALL, Web",
         period: "2022/04 ~ 2022/06",
         part: "Credit Feature",
-        images: ["/images/baknmall1.png"],
+        images: ["/images/bankmall1.png"],
         feelings:
           "Styled-Components allowed me to build fast publishing and to customize Antd Components. Props Drilling issue could be solved through createContext and useContext provided by React.",
         skills: "styled-components, antd, context",
@@ -255,7 +255,7 @@ export const texts: { [country in EnabledLanguage]: TextKeywords } = {
         title: "SOUNDJUNGLE, Hybrid",
         period: "2022/07 ~ 2022/09",
         part: "Overall Maintenance",
-        images: ["soundjungle1.png"],
+        images: ["/images/soundjungle1.png"],
         feelings:
           "It was a project to share the web with the app by displaying a web view on Expo. \nThe client's data could be synchronized using typescript, reaction-query, which did not match the existing server data.",
         skills: "typescript, react-query, react-hook-form",
