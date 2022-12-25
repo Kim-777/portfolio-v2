@@ -11,9 +11,10 @@ const Skills = () => {
     () => [
       "language",
       "community",
+      "javascript",
+      "typescript",
       "react",
       "next",
-      "redux",
       "query",
       "hook_form",
     ],

@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import classNames from "classnames/bind";
 import { texts } from "constants/texts";
 import { useLanguage } from "contexts/LanguageProvider";
+import { useTheme } from "contexts/ThemeProvider";
 
 const cx = classNames.bind(styles);
 
@@ -11,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { selectedLanguage } = useLanguage();
+  const { selectedTextColor } = useTheme();
   return (
     <>
       <Head>
@@ -20,7 +22,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ whiteSpace: "pre-wrap" }}>
-        <p className={cx({ texts: true })}>{texts[selectedLanguage].index}</p>
+        <p className={cx({ texts: true })} style={{ color: selectedTextColor }}>
+          {texts[selectedLanguage].index}
+        </p>
       </div>
     </>
   );

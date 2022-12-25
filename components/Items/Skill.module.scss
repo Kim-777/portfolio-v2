@@ -6,3 +6,18 @@
     font-size: 1.2rem;
   }
 }
+
+.title {
+  transition: all 200ms ease;
+  // transform: scale(1.5);
+
+  &:hover {
+    transform: scale(1.04);
+  }
+  
+}
+
+.descriptionWrapper {
+  padding: 8px;
+  white-space: pre-wrap;
+}
