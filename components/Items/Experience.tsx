@@ -68,6 +68,7 @@ const Experience = ({
             <li className={cx({ imgWrapper: true })}>
               {images?.map((img) => (
                 <img
+                  key={img}
                   alt="project img"
                   src={img}
                   className={cx({ img: true })}
