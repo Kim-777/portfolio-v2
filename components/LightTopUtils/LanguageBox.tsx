@@ -37,6 +37,7 @@ const LanguageBox = () => {
         <div className={cx({ liWrapper: true })}>
           {Languages.map((item) => (
             <button
+              key={item}
               onClick={() => {
                 setSelectedLanguage(item);
                 setIsOpen(false);

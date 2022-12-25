@@ -4,14 +4,14 @@ export type Backgrounds = "light" | "dark";
 
 export type TextColor =
   | "#FFF"
+  | "#ffffeb"
   | "#eaeac4"
-  | "#eaeac4"
-  | "#000"
-  | "#0f0e0e"
-  | "#201818";
+  | "#571c1c"
+  | "#322020"
+  | "#000";
 
 const textColorsWhenDark = ["#FFF", "#ffffeb", "#e7e7af"];
-const textColorsWhenLight = ["#000", "#322020", "#571c1c"];
+const textColorsWhenLight = ["#571c1c", "#322020", "#000"];
 
 export type TextColors = typeof textColorsWhenDark | typeof textColorsWhenLight;
 

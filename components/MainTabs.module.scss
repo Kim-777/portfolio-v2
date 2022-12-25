@@ -1,0 +1,19 @@
+.wrapper {
+  padding-inline: 8px;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+ 
+  & li {
+    margin-right: 36px;
+  }
+}
+
+.tab {
+  font-size: 1.4rem;
+  padding: 4px;
+}

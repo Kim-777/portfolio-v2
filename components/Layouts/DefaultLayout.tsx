@@ -6,6 +6,7 @@ import { useTheme } from "contexts/ThemeProvider";
 import LightTopMenu from "components/LightTopUtils/LightTopMenu";
 import { texts } from "constants/texts";
 import MainInfoSection from "components/MainInfoSection";
+import MainTabs from "components/MainTabs";
 
 const cx = classNames.bind(styles);
 
@@ -27,6 +28,7 @@ const DefaultLayout = ({ children }: Props) => {
       <div className={cx({ wrapper: true })}>
         <LightTopMenu />
         <MainInfoSection />
+        <MainTabs />
         {children}
       </div>
     </main>
