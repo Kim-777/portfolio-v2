@@ -4,12 +4,14 @@ import styles from "../styles/Home.module.css";
 import { useLanguage } from "../contexts/LanguageProvider";
 import { texts } from "../constants/texts";
 import LanguageBox from "../components/LanguageBox";
+import BackgroundColorSwitch from "../components/BackgroundColorSwitch";
+import { useTheme } from "../contexts/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { selectedLanguage } = useLanguage();
-
+  const { selectedTextColor } = useTheme();
   console.log("selectedLanguage ::::: ", selectedLanguage);
 
   return (
@@ -22,6 +24,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <LanguageBox />
+        <BackgroundColorSwitch />
+        <div>{texts[selectedLanguage].title}</div>
+        <div style={{ color: selectedTextColor }}>{selectedTextColor}</div>
       </main>
     </>
   );
