@@ -11,6 +11,7 @@ const BackgroundColorSwitch = () => {
     <div>
       <button
         className={cx({
+          btn: true,
           [selectedBackground]: true,
         })}
         style={{ color: selectedTextColor }}

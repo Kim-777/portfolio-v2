@@ -1,4 +1,4 @@
-import { useTheme } from "contexts/ThemeProvider";
+import { TextColor, useTheme } from "contexts/ThemeProvider";
 import React from "react";
 import styles from "./ColorPalette.module.scss";
 import classNames from "classnames/bind";
@@ -6,7 +6,8 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 const ColorPalette = () => {
-  const { selectedTextColor, textColorPalette } = useTheme();
+  const { selectedTextColor, textColorPalette, setSelectedTextColor } =
+    useTheme();
   const [isOpenPalette, setIsOpenPalette] = React.useState<boolean>(false);
   return (
     <div style={{ position: "relative" }}>
@@ -22,8 +23,12 @@ const ColorPalette = () => {
         <div className={cx({ palette: true })}>
           {textColorPalette.map((palette) => (
             <button
+              key={palette}
               className={cx({ palette_item: true })}
               style={{ backgroundColor: palette }}
+              onClick={() => {
+                setSelectedTextColor(palette as TextColor);
+              }}
             ></button>
           ))}
         </div>

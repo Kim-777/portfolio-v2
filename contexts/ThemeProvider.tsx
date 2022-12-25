@@ -2,7 +2,7 @@ import React, { createContext, ReactNode, useContext } from "react";
 
 export type Backgrounds = "light" | "dark";
 
-type TextColor =
+export type TextColor =
   | "#FFF"
   | "#eaeac4"
   | "#eaeac4"
@@ -10,8 +10,8 @@ type TextColor =
   | "#0f0e0e"
   | "#201818";
 
-const textColorsWhenDark = ["#FFF", "#eaeac4", "#eaeac4"];
-const textColorsWhenLight = ["#000", "#0f0e0e", "#201818"];
+const textColorsWhenDark = ["#FFF", "#ffffeb", "#e7e7af"];
+const textColorsWhenLight = ["#000", "#322020", "#571c1c"];
 
 export type TextColors = typeof textColorsWhenDark | typeof textColorsWhenLight;
 

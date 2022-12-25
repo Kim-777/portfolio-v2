@@ -42,6 +42,7 @@ const LanguageBox = () => {
                 setIsOpen(false);
               }}
               className={cx({ liBtn: true })}
+              style={{ color: selectedTextColor, marginBlock: "8px" }}
             >
               {item}
             </button>
