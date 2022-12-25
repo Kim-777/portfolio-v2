@@ -5,13 +5,15 @@ export type Backgrounds = "light" | "dark";
 export type TextColor =
   | "#FFF"
   | "#ffffeb"
-  | "#eaeac4"
+  | "#e7e7af"
+  | "#cfdbed"
   | "#571c1c"
   | "#322020"
+  | "#080812"
   | "#000";
 
-const textColorsWhenDark = ["#FFF", "#ffffeb", "#e7e7af"];
-const textColorsWhenLight = ["#571c1c", "#322020", "#000"];
+const textColorsWhenDark = ["#FFF", "#ffffeb", "#e7e7af", "#cfdbed"];
+const textColorsWhenLight = ["#571c1c", "#322020", "#080812", "#000"];
 
 export type TextColors = typeof textColorsWhenDark | typeof textColorsWhenLight;
 

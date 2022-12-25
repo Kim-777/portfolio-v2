@@ -15,22 +15,23 @@ const ColorPalette = () => {
         onClick={() => {
           setIsOpenPalette((prev) => !prev);
         }}
-        style={{ fontSize: "1.2rem", color: selectedTextColor }}
-      >
-        {selectedTextColor}
-      </button>
+        className={cx({ palette_item: true })}
+        style={{ backgroundColor: selectedTextColor }}
+      ></button>
       {isOpenPalette && (
         <div className={cx({ palette: true })}>
-          {textColorPalette.map((palette) => (
-            <button
-              key={palette}
-              className={cx({ palette_item: true })}
-              style={{ backgroundColor: palette }}
-              onClick={() => {
-                setSelectedTextColor(palette as TextColor);
-              }}
-            ></button>
-          ))}
+          {textColorPalette
+            .filter((item) => item !== selectedTextColor)
+            .map((palette) => (
+              <button
+                key={palette}
+                className={cx({ palette_item: true })}
+                style={{ backgroundColor: palette }}
+                onClick={() => {
+                  setSelectedTextColor(palette as TextColor);
+                }}
+              ></button>
+            ))}
         </div>
       )}
     </div>
