@@ -4,9 +4,9 @@ import classNames from "classnames/bind";
 import { useLanguage } from "contexts/LanguageProvider";
 import { useTheme } from "contexts/ThemeProvider";
 import LightTopMenu from "components/LightTopUtils/LightTopMenu";
-import { texts } from "constants/texts";
 import MainInfoSection from "components/MainInfoSection";
 import MainTabs from "components/MainTabs";
+import Footer from "./Footer";
 
 const cx = classNames.bind(styles);
 
@@ -30,6 +30,7 @@ const DefaultLayout = ({ children }: Props) => {
         <MainInfoSection />
         <MainTabs />
         {children}
+        <Footer />
       </div>
     </main>
   );

@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ whiteSpace: "pre-wrap" }}>
+      <div style={{ whiteSpace: "pre-wrap", minHeight: "50vh" }}>
         <p className={cx({ texts: true })} style={{ color: selectedTextColor }}>
           {texts[selectedLanguage].index}
         </p>

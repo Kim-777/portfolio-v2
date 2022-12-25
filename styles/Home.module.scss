@@ -22,10 +22,12 @@ background-color: white;
 
 .wrapper {
   max-width: 1200px;
+  min-height: 100vh;
   position: relative;
   margin: 0 auto;
   padding-inline: 1rem;
-  padding-block: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
 }
 
 .texts {

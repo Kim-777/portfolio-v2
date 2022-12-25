@@ -24,12 +24,12 @@ const Skills = () => {
   return (
     <>
       <Head>
-        <title>kimyechan</title>
+        <title>kim-skills</title>
         <meta name="description" content="kimyechan portfolio index page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+      <div style={{ minHeight: "50vh" }}>
         {skills.map((skill) => (
           <Skill
             key={skill}
