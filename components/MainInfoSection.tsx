@@ -23,8 +23,11 @@ const MainInfoSection = () => {
       <div className={cx({ defaultInfo: true })}>
         <h1>{texts[selectedLanguage].authorName}</h1>
         <h3>1993.03.09</h3>
-        <h3>{texts[selectedLanguage].job}</h3>
-        <h3> iloo3012@gmail.com</h3>
+        <div style={{ marginBlock: "8px" }}>
+          <h3>{texts[selectedLanguage].job}</h3>
+          <h3>iloo3012@gmail.com</h3>
+          <h3>010-9938-8190</h3>
+        </div>
       </div>
 
       <ul className={cx({ ul: true })}>
