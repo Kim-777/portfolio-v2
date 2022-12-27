@@ -5,6 +5,7 @@ import { useTheme } from "contexts/ThemeProvider";
 import { useLanguage } from "contexts/LanguageProvider";
 import { texts } from "constants/texts";
 import Link from "next/link";
+import AnimationSlogan from "./AnimationSlogan";
 
 const cx = classNames.bind(styles);
 
@@ -21,8 +22,11 @@ const MainInfoSection = () => {
       }}
     >
       <div className={cx({ defaultInfo: true })}>
-        <h1>{texts[selectedLanguage].authorName}</h1>
-        <h3>1993.03.09</h3>
+        <div style={{ paddingBlock: "8px" }}>
+          <h1>{texts[selectedLanguage].authorName}</h1>
+          <h3>1993.03.09</h3>
+        </div>
+
         <div style={{ marginBlock: "8px" }}>
           <h3>{texts[selectedLanguage].job}</h3>
           <h3>iloo3012@gmail.com</h3>
@@ -57,6 +61,7 @@ const MainInfoSection = () => {
             Linked In
           </a>
         </li>
+        <AnimationSlogan />
       </ul>
     </div>
   );
