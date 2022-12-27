@@ -1,0 +1,2 @@
+export const BACKGROUND_KEY = "BACKGROUND_PORTFOLIO";
+export const LANGUAGE_KEY = "LANGUAGE_KEY";

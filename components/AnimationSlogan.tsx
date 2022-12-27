@@ -7,7 +7,7 @@ const AnimationSlogan = () => {
   const { selectedLanguage } = useLanguage();
   const { selectedBackground } = useTheme();
 
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words:
       selectedLanguage === "en"
         ? [

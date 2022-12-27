@@ -13,8 +13,7 @@ const Tabs = ["/", "/skills", "/works"];
 const MainTabs = () => {
   const router = useRouter();
   const { selectedLanguage } = useLanguage();
-  const { selectedBackground, selectedTextColor } = useTheme();
-  console.log("router ::: ", router.asPath);
+  const { selectedTextColor } = useTheme();
 
   return (
     <div className={cx({ wrapper: true })}>

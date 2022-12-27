@@ -1,12 +1,13 @@
 import React, { ReactNode } from "react";
 import styles from "styles/Home.module.scss";
 import classNames from "classnames/bind";
-import { useLanguage } from "contexts/LanguageProvider";
-import { useTheme } from "contexts/ThemeProvider";
+import { EnabledLanguage, useLanguage } from "contexts/LanguageProvider";
+import { Backgrounds, useTheme } from "contexts/ThemeProvider";
 import LightTopMenu from "components/LightTopUtils/LightTopMenu";
 import MainInfoSection from "components/MainInfoSection";
 import MainTabs from "components/MainTabs";
 import Footer from "./Footer";
+import { BACKGROUND_KEY, LANGUAGE_KEY } from "constants/key";
 
 const cx = classNames.bind(styles);
 
@@ -15,8 +16,25 @@ type Props = {
 };
 
 const DefaultLayout = ({ children }: Props) => {
-  const { selectedLanguage } = useLanguage();
-  const { selectedTextColor, selectedBackground } = useTheme();
+  const [loading, setLoading] = React.useState<boolean>(true);
+  const { selectedBackground, setSelectedBackground } = useTheme();
+  const { setSelectedLanguage } = useLanguage();
+
+  React.useEffect(() => {
+    const background = localStorage.getItem(BACKGROUND_KEY);
+    const lan = localStorage.getItem(LANGUAGE_KEY);
+    if (background) {
+      setSelectedBackground(background as Backgrounds);
+    }
+
+    if (lan) {
+      setSelectedLanguage(lan as EnabledLanguage);
+    }
+
+    setLoading(false);
+  }, []);
+
+  if (loading) return null;
 
   return (
     <main

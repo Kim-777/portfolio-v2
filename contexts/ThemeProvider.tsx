@@ -1,3 +1,4 @@
+import { BACKGROUND_KEY } from "constants/key";
 import React, { createContext, ReactNode, useContext } from "react";
 
 export type Backgrounds = "light" | "dark";
@@ -53,11 +54,12 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   const toggleBackgound = React.useCallback(() => {
     if (selectedBackground === "light") {
-      console.log("selectedBackground ::: ", selectedBackground);
+      localStorage.setItem(BACKGROUND_KEY, "dark");
       setSelectedBackground("dark");
       return;
     }
 
+    localStorage.setItem(BACKGROUND_KEY, "light");
     setSelectedBackground("light");
   }, [selectedBackground]);
 
