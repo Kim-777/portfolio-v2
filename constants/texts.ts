@@ -75,7 +75,7 @@ export const texts: { [country in EnabledLanguage]: TextKeywords } = {
           "정확하고 즐거운 커뮤니케이션은 모든 것에 기초가 된다고 생각합니다. \n동료들과 다양한 주제로 소통하는 걸 즐깁니다.",
       },
       javascript: {
-        title: "자바스크립트(2015이후)",
+        title: "자바스크립트(ES2015 ~)",
         description:
           "FE 생태계의 기초가 되는 언어인 만큼 꾸준한 반복 학습을 통해, 비동기, 클로저, 프로토타입 등, 모던 자바스크립트를 이해하고 정확히 사용합니다.",
       },
