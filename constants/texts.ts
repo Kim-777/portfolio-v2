@@ -173,7 +173,7 @@ export const texts: { [country in EnabledLanguage]: TextKeywords } = {
     tab2: "Skills",
     tab3: "Works",
     index:
-      "Hello. \nI'm Yechan Kim, the web developer :)\nDuring my year as a front-end developer, I was able to create a number of products for users with good colleagues. \nI'm a developer who thinks that knowing exactly what technology to use is the basis for making a good product. I enjoy reading official documents, and I enjoy making products with the knowledge I get from them. \nIn the future, I will be a developer who can combine the experience and interest to provide good products for users and good code for the team.",
+      "Hello. \nI'm Yechan Kim, the web developer :)\nFor a year as a front-end worker, I was able to create a number of products for users with good colleagues. \nI'm a developer who thinks that knowing exactly what technology to use is the basis for making a good product. I enjoy reading official documents, and I enjoy making products with the knowledge I get from them. \nIn the future, I will be a developer who can combine the experience and interest to provide good products for users and good code for the team.",
     period: "Period",
     skill_title: "Used Skills",
     feelings: "Experience",
