@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import { useTheme } from "contexts/ThemeProvider";
 import { Experience, TextKeywords, texts } from "constants/texts";
 import { useLanguage } from "contexts/LanguageProvider";
+import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
@@ -65,13 +66,14 @@ const Experience = ({
             - {texts[selectedLanguage].part} : {part}
           </li>
           {!!images && images?.length >= 1 && (
-            <li className={cx({ imgWrapper: true })}>
+            <li className={cx({ imgWrapper: true, img: true })}>
               {images?.map((img) => (
-                <img
+                <Image
                   key={img}
+                  fill
                   alt="project img"
                   src={img}
-                  className={cx({ img: true })}
+                  style={{ objectFit: "cover" }}
                 />
               ))}
             </li>

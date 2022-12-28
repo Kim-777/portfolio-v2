@@ -37,14 +37,18 @@
 }
 
 .imgWrapper {
-  margin-block: 16px;
+  margin-block: 16px !important;
 }
 
 .img {
   max-width: 500px;
+  height: 350px;
+  background-color: whitesmoke;
   object-fit: contain;
+  position: relative;
   @media screen and (max-width: 700px) {
     max-width: 300px;
+    height: 250px;
   }
     
 }
