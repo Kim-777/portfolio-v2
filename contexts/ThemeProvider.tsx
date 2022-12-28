@@ -14,7 +14,7 @@ export type TextColor =
   | "#000";
 
 const textColorsWhenDark = ["#FFF", "#ffffeb", "#e7e7af", "#cfdbed"];
-const textColorsWhenLight = ["#571c1c", "#322020", "#080812", "#000"];
+const textColorsWhenLight = ["#080812", "#571c1c", "#322020", "#000"];
 
 export type TextColors = typeof textColorsWhenDark | typeof textColorsWhenLight;
 
