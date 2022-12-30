@@ -30,7 +30,7 @@ const MainInfoSection = () => {
         <div style={{ marginBlock: "8px" }}>
           <h3>{texts[selectedLanguage].job}</h3>
           <h3>iloo3012@gmail.com</h3>
-          <h3>010-9938-8190</h3>
+          {/* <h3>010-9938-8190</h3> */}
         </div>
       </div>
 
