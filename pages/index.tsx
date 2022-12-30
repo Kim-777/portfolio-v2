@@ -17,6 +17,7 @@ export default function Home() {
     <>
       <Head>
         <title>kimyechan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta name="description" content="kimyechan portfolio index page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="김예찬 포트폴리오" />

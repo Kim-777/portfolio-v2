@@ -25,11 +25,12 @@ const Skills = () => {
     <>
       <Head>
         <title>kim-skills</title>
-        <meta name="description" content="kimyechan portfolio index page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* <meta name="description" content="kimyechan portfolio index page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="김예찬 포트폴리오" />
         <meta property="og:image" content="./among.jpeg"></meta>
-        <link rel="icon" href="/circle-among.png" />
+        <link rel="icon" href="/circle-among.png" /> */}
       </Head>
       <div style={{ minHeight: "50vh" }}>
         {skills.map((skill) => (
