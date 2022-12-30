@@ -22,7 +22,7 @@ const AnimationSlogan = () => {
             "다양한 주제의 대화는 언제나 환영합니다",
             "커피 한 잔하실까요? ☕️",
           ],
-    loop: 1,
+    loop: false,
     delaySpeed: 1000,
   });
 
