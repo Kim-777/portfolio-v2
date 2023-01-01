@@ -16,8 +16,18 @@ const BackgroundColorSwitch = () => {
         })}
         style={{ color: selectedTextColor }}
         onClick={toggleBackgound}
+        title={
+          selectedBackground === "light"
+            ? "다크모드로 변경"
+            : "라이트모드로 변경"
+        }
       >
-        {selectedBackground}
+        <figure>
+          <span role="img" aria-label="toggle-btn-img">
+            {selectedBackground === "light" ? "🌞" : "🌜"}
+          </span>
+        </figure>
+        <p>{selectedBackground}</p>
       </button>
     </div>
   );
