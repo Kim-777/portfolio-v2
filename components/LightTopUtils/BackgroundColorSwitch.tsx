@@ -2,6 +2,7 @@ import React from "react";
 import { useTheme } from "contexts/ThemeProvider";
 import classNames from "classnames/bind";
 import styles from "./BackgroundColorSwitch.module.scss";
+import Image from "next/image";
 
 const cx = classNames.bind(styles);
 
@@ -22,10 +23,27 @@ const BackgroundColorSwitch = () => {
             : "라이트모드로 변경"
         }
       >
-        <figure>
-          <span role="img" aria-label="toggle-btn-img">
+        <figure style={{ width: "20px", height: "20px" }}>
+          {/* <span role="img" aria-label="toggle-btn-img">
             {selectedBackground === "light" ? "🌞" : "🌜"}
-          </span>
+          </span> */}
+          {selectedBackground === "light" ? (
+            <Image
+              width={20}
+              height={20}
+              src="/images/sun.png"
+              alt="sun"
+              style={{ objectFit: "contain" }}
+            />
+          ) : (
+            <Image
+              width={20}
+              height={20}
+              src="/images/moon.png"
+              alt="moon"
+              style={{ objectFit: "contain" }}
+            />
+          )}
         </figure>
         <p>{selectedBackground}</p>
       </button>
