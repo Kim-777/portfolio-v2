@@ -82,23 +82,23 @@ export const texts: { [country in EnabledLanguage]: TextKeywords } = {
       typescript: {
         title: "타입스크립트",
         description:
-          "요즘 가장 관심이 가는 기술로써 , 기존의 프로젝트를 타입스크립트로 전환하고,관련된 다양한 책을 읽음으로써 올바른 사용법을 익혀가고 있습니다.",
+          "요즘 가장 관심이 가는 기술입니다. 기존의 프로젝트를 타입스크립트로 전환하고,관련된 다양한 책을 읽음으로써 올바른 사용법을 익혀가고 있습니다.",
       },
       react: {
         title: "리액트",
         description:
-          "주력으로 사용하는 기술로써, 제공하는 api들을 학습하고, 리액트를 통한 선언적 컴포넌트를 통해 예측 가능한 UI를 그립니다.",
+          "주력으로 사용하는 기술입니다. 제공하는 api들을 학습하고, 리액트를 통한 선언적 컴포넌트를 통해 예측 가능한 UI를 그립니다.",
       },
       next: {
         title: "넥스트",
         description:
-          "리액트를 편하게 사용하기 위한 프레임워크로, 넥스트가 지원하는 서버사이드렌더링과 파일 기반 라우팅을 비롯한 넥스트의 편의를 이용할 수 있습니다.",
+          "리액트를 편하게 사용하기 위한 프레임워크로, 넥스트가 지원하는 서버사이드렌더링과 파일 기반 라우팅을 비롯한 넥스트가 제공하는 다양한 편의 기능을 능숙하게 다룹니다.",
       },
 
       query: {
         title: "리액트쿼리",
         description:
-          "React query를 통해 서버 데이터 를 관리하는 데 능숙하고, queryClient, useQuery, useMutation 등 모든 api 를 자유롭게 사용합니다.",
+          "React query를 통해 서버 데이터 를 관리하는 데 능숙하고, queryClient, useQuery, useMutation 등, 제공되는  API를 자유롭게 사용합니다.",
       },
       hook_form: {
         title: "리액트훅폼",
