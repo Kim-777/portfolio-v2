@@ -10,17 +10,26 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
-    "@types/node": "18.11.17",
-    "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.10",
     "classnames": "^2.3.2",
-    "eslint": "8.30.0",
-    "eslint-config-next": "13.1.1",
-    "next": "13.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "14.0.3",
+    "next-themes": "^0.2.1",
+    "prisma": "^5.7.1",
+    "query-string": "^8.1.0",
+    "react": "^18",
+    "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
-    "sass": "^1.57.1",
-    "typescript": "4.9.4"
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "@shoplflow/eslint-plugin": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "typescript": "^5"
   }
 }
