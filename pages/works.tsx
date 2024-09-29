@@ -1,38 +1,31 @@
-import Experience from "components/Items/Experience";
-import { TextKeywords, texts } from "constants/texts";
-import { useLanguage } from "contexts/LanguageProvider";
-import Head from "next/head";
-import React from "react";
+import Experience from 'components/Items/Experience';
+import type { TextKeywords } from 'constants/texts';
+import { texts } from 'constants/texts';
+import { useLanguage } from 'contexts/LanguageProvider';
+import Head from 'next/head';
+import React from 'react';
 
-type EnabledExperiences = keyof TextKeywords["experience"];
+type EnabledExperiences = keyof TextKeywords['experience'];
 
 const Works = () => {
   const { selectedLanguage } = useLanguage();
-  const [selectedProject, setSelectedProject] =
-    React.useState<EnabledExperiences | null>(null);
-  const works = React.useMemo<(keyof TextKeywords["experience"])[]>(
-    () => [
-      "homegrit",
-      "spvrkd",
-      "sound_jungle",
-      "bankmall",
-      "jigugong",
-      "pilyo",
-    ],
-    []
+  const [selectedProject, setSelectedProject] = React.useState<EnabledExperiences | null>(null);
+  const works = React.useMemo<Array<keyof TextKeywords['experience']>>(
+    () => ['homegrit', 'spvrkd', 'sound_jungle', 'bankmall', 'jigugong', 'pilyo'],
+    [],
   );
 
   return (
     <>
       <Head>
         <title>kim-works</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         {/* <meta name="description" content="kimyechan portfolio index page" />
         <meta property="og:title" content="김예찬 포트폴리오" />
         <meta property="og:image" content="./among.jpeg"></meta>
         <link rel="icon" href="/circle-among.png" /> */}
       </Head>
-      <div style={{ minHeight: "50vh" }}>
+      <div style={{ minHeight: '50vh' }}>
         {works.map((skill) => (
           <Experience
             key={skill}
