@@ -1,20 +1,15 @@
-import { BACKGROUND_KEY } from "constants/key";
-import React, { createContext, ReactNode, useContext } from "react";
+'use client';
 
-export type Backgrounds = "light" | "dark";
+import { BACKGROUND_KEY } from 'constants/key';
+import type { ReactNode } from 'react';
+import React, { createContext, useContext } from 'react';
 
-export type TextColor =
-  | "#FFF"
-  | "#ffffeb"
-  | "#e7e7af"
-  | "#cfdbed"
-  | "#571c1c"
-  | "#322020"
-  | "#080812"
-  | "#000";
+export type Backgrounds = 'light' | 'dark';
 
-const textColorsWhenDark = ["#FFF", "#ffffeb", "#e7e7af", "#cfdbed"];
-const textColorsWhenLight = ["#080812", "#571c1c", "#322020", "#000"];
+export type TextColor = '#FFF' | '#ffffeb' | '#e7e7af' | '#cfdbed' | '#571c1c' | '#322020' | '#080812' | '#000';
+
+const textColorsWhenDark = ['#FFF', '#ffffeb', '#e7e7af', '#cfdbed'];
+const textColorsWhenLight = ['#080812', '#571c1c', '#322020', '#000'];
 
 export type TextColors = typeof textColorsWhenDark | typeof textColorsWhenLight;
 
@@ -33,12 +28,18 @@ type ThemeContextProps = {
 };
 
 export const ThemeContext = createContext<ThemeContextProps>({
-  selectedBackground: "light",
-  setSelectedBackground(back) {},
+  selectedBackground: 'light',
+  setSelectedBackground() {
+    return;
+  },
   textColorPalette: mapperColorPalette.light,
-  selectedTextColor: "#000",
-  setSelectedTextColor(color) {},
-  toggleBackgound() {},
+  selectedTextColor: '#000',
+  setSelectedTextColor() {
+    return;
+  },
+  toggleBackgound() {
+    return;
+  },
 });
 
 type ThemeProviderProps = {
@@ -46,27 +47,23 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [selectedBackground, setSelectedBackground] =
-    React.useState<Backgrounds>("light");
+  const [selectedBackground, setSelectedBackground] = React.useState<Backgrounds>('light');
 
-  const [selectedTextColor, setSelectedTextColor] =
-    React.useState<TextColor>("#000");
+  const [selectedTextColor, setSelectedTextColor] = React.useState<TextColor>('#000');
 
   const toggleBackgound = React.useCallback(() => {
-    if (selectedBackground === "light") {
-      localStorage.setItem(BACKGROUND_KEY, "dark");
-      setSelectedBackground("dark");
+    if (selectedBackground === 'light') {
+      localStorage.setItem(BACKGROUND_KEY, 'dark');
+      setSelectedBackground('dark');
       return;
     }
 
-    localStorage.setItem(BACKGROUND_KEY, "light");
-    setSelectedBackground("light");
+    localStorage.setItem(BACKGROUND_KEY, 'light');
+    setSelectedBackground('light');
   }, [selectedBackground]);
 
   React.useEffect(() => {
-    setSelectedTextColor(
-      mapperColorPalette[selectedBackground][0] as TextColor
-    );
+    setSelectedTextColor(mapperColorPalette[selectedBackground][0] as TextColor);
   }, [selectedBackground]);
 
   return (

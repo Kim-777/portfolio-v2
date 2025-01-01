@@ -1,4 +1,6 @@
-import Skill from 'components/Items/Skill';
+'use client';
+
+import Skill from './Items/Skill';
 import type { TextKeywords } from 'constants/texts';
 import { texts } from 'constants/texts';
 import { useLanguage } from 'contexts/LanguageProvider';

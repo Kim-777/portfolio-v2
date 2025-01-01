@@ -1,16 +1,19 @@
-import React from "react";
-import styles from "./Experience.module.scss";
-import classNames from "classnames/bind";
-import { useTheme } from "contexts/ThemeProvider";
-import { Experience, TextKeywords, texts } from "constants/texts";
-import { useLanguage } from "contexts/LanguageProvider";
-import Image from "next/image";
+'use client';
+
+import React from 'react';
+import styles from './Experience.module.scss';
+import classNames from 'classnames/bind';
+import { useTheme } from 'contexts/ThemeProvider';
+import type { TextKeywords, Experience as ExperienceType } from 'constants/texts';
+import { texts } from 'constants/texts';
+import { useLanguage } from 'contexts/LanguageProvider';
+import Image from 'next/image';
 
 const cx = classNames.bind(styles);
 
-type EnabledExperiences = keyof TextKeywords["experience"];
+type EnabledExperiences = keyof TextKeywords['experience'];
 
-type Props = Experience & {
+type Props = ExperienceType & {
   selectedProject: EnabledExperiences | null;
   setSelectedProject: (project: EnabledExperiences | null) => void;
 };
@@ -45,17 +48,14 @@ const Experience = ({
         style={{
           color: selectedTextColor,
           borderBottomColor: selectedTextColor,
-          borderBottomStyle: "solid",
-          borderBottomWidth: isSelected ? "1px" : "0px",
+          borderBottomStyle: 'solid',
+          borderBottomWidth: isSelected ? '1px' : '0px',
         }}
       >
         {title} →
       </button>
       {isSelected && (
-        <ul
-          className={cx({ descriptionWrapper: true })}
-          style={{ color: selectedTextColor }}
-        >
+        <ul className={cx({ descriptionWrapper: true })} style={{ color: selectedTextColor }}>
           <li>
             - {texts[selectedLanguage].period} : {period}
           </li>
@@ -65,16 +65,10 @@ const Experience = ({
           <li>
             - {texts[selectedLanguage].part} : {part}
           </li>
-          {!!images && images?.length >= 1 && (
+          {Boolean(images) && images!.length >= 1 && (
             <li className={cx({ imgWrapper: true, img: true })}>
               {images?.map((img) => (
-                <Image
-                  key={img}
-                  fill
-                  alt="project img"
-                  src={img}
-                  style={{ objectFit: "cover" }}
-                />
+                <Image key={img} fill alt='project img' src={img} style={{ objectFit: 'cover' }} />
               ))}
             </li>
           )}

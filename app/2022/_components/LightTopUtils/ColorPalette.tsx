@@ -1,16 +1,18 @@
-import { TextColor, useTheme } from "contexts/ThemeProvider";
-import React from "react";
-import styles from "./ColorPalette.module.scss";
-import classNames from "classnames/bind";
+'use client';
+
+import type { TextColor } from 'contexts/ThemeProvider';
+import { useTheme } from 'contexts/ThemeProvider';
+import React from 'react';
+import styles from './ColorPalette.module.scss';
+import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
 const ColorPalette = () => {
-  const { selectedTextColor, textColorPalette, setSelectedTextColor } =
-    useTheme();
+  const { selectedTextColor, textColorPalette, setSelectedTextColor } = useTheme();
   const [isOpenPalette, setIsOpenPalette] = React.useState<boolean>(false);
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: 'relative' }}>
       <button
         onClick={() => {
           setIsOpenPalette((prev) => !prev);

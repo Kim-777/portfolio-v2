@@ -1,7 +1,10 @@
-import { LANGUAGE_KEY } from "constants/key";
-import React, { createContext, ReactNode, useContext } from "react";
+'use client';
 
-export type EnabledLanguage = "ko" | "en";
+import { LANGUAGE_KEY } from 'constants/key';
+import type { ReactNode } from 'react';
+import React, { createContext, useContext } from 'react';
+
+export type EnabledLanguage = 'ko' | 'en';
 
 type ContextProps = {
   selectedLanguage: EnabledLanguage;
@@ -9,8 +12,10 @@ type ContextProps = {
 };
 
 export const LanguageCotext = createContext<ContextProps>({
-  selectedLanguage: "ko",
-  setSelectedLanguage(lang) {},
+  selectedLanguage: 'ko',
+  setSelectedLanguage() {
+    return;
+  },
 });
 
 export const useLanguage = () => {
@@ -22,8 +27,7 @@ type LanguageProviderProps = {
 };
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [selectedLanguage, setSelectedLanguage] =
-    React.useState<EnabledLanguage>("ko");
+  const [selectedLanguage, setSelectedLanguage] = React.useState<EnabledLanguage>('ko');
 
   const handleSelectedLanguage = React.useCallback((lan: EnabledLanguage) => {
     localStorage.setItem(LANGUAGE_KEY, lan);
@@ -31,9 +35,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   }, []);
 
   return (
-    <LanguageCotext.Provider
-      value={{ selectedLanguage, setSelectedLanguage: handleSelectedLanguage }}
-    >
+    <LanguageCotext.Provider value={{ selectedLanguage, setSelectedLanguage: handleSelectedLanguage }}>
       {children}
     </LanguageCotext.Provider>
   );

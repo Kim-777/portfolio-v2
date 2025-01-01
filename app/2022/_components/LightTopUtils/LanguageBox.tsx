@@ -1,8 +1,11 @@
-import React from "react";
-import { EnabledLanguage, useLanguage } from "../../contexts/LanguageProvider";
-import classNames from "classnames/bind";
-import styles from "./LanguageBox.module.scss";
-import { useTheme } from "../../contexts/ThemeProvider";
+'use client';
+
+import React from 'react';
+import type { EnabledLanguage } from 'contexts/LanguageProvider';
+import { useLanguage } from 'contexts/LanguageProvider';
+import classNames from 'classnames/bind';
+import styles from './LanguageBox.module.scss';
+import { useTheme } from 'contexts/ThemeProvider';
 
 const cx = classNames.bind(styles);
 
@@ -14,18 +17,19 @@ const LanguageBox = () => {
     (lang: string): lang is EnabledLanguage => {
       return lang !== selectedLanguage;
     },
-    [selectedLanguage]
+    [selectedLanguage],
   );
 
   const Languages = React.useMemo<EnabledLanguage[]>(
-    () => ["ko", "en"].filter<EnabledLanguage>(helper),
-    [selectedLanguage]
+    () => ['ko', 'en'].filter<EnabledLanguage>(helper),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [selectedLanguage, helper],
   );
 
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: 'relative' }}>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className={cx({ [selectedBackground]: true })}
@@ -43,7 +47,7 @@ const LanguageBox = () => {
                 setIsOpen(false);
               }}
               className={cx({ liBtn: true })}
-              style={{ color: selectedTextColor, marginBlock: "8px" }}
+              style={{ color: selectedTextColor, marginBlock: '8px' }}
             >
               {item}
             </button>

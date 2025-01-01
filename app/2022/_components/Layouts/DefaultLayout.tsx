@@ -1,13 +1,18 @@
-import React, { ReactNode } from "react";
-import styles from "styles/Home.module.scss";
-import classNames from "classnames/bind";
-import { EnabledLanguage, useLanguage } from "contexts/LanguageProvider";
-import { Backgrounds, useTheme } from "contexts/ThemeProvider";
-import LightTopMenu from "components/LightTopUtils/LightTopMenu";
-import MainInfoSection from "components/MainInfoSection";
-import MainTabs from "components/MainTabs";
-import Footer from "./Footer";
-import { BACKGROUND_KEY, LANGUAGE_KEY } from "constants/key";
+'use client';
+
+import type { ReactNode } from 'react';
+import React from 'react';
+import styles from 'styles/Home.module.scss';
+import classNames from 'classnames/bind';
+import type { EnabledLanguage } from 'contexts/LanguageProvider';
+import { useLanguage } from 'contexts/LanguageProvider';
+import type { Backgrounds } from 'contexts/ThemeProvider';
+import { useTheme } from 'contexts/ThemeProvider';
+import LightTopMenu from '../LightTopUtils/LightTopMenu';
+import MainInfoSection from '../MainInfoSection';
+import MainTabs from '../MainTabs';
+import Footer from './Footer';
+import { BACKGROUND_KEY, LANGUAGE_KEY } from 'constants/key';
 
 const cx = classNames.bind(styles);
 
@@ -32,9 +37,11 @@ const DefaultLayout = ({ children }: Props) => {
     }
 
     setLoading(false);
-  }, []);
+  }, [setSelectedBackground, setSelectedLanguage]);
 
-  if (loading) return null;
+  if (loading) {
+    return null;
+  }
 
   return (
     <main

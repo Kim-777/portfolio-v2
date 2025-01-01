@@ -1,4 +1,6 @@
-import Experience from 'components/Items/Experience';
+'use client';
+
+import Experience from './Items/Experience';
 import type { TextKeywords } from 'constants/texts';
 import { texts } from 'constants/texts';
 import { useLanguage } from 'contexts/LanguageProvider';
